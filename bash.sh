@@ -1,3 +1,3 @@
 #!/bin/bash
-. ./install.sh
+. ./main.sh
 config_bash
