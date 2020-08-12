@@ -72,7 +72,8 @@ noremap - ;
 noremap _ ,
 
 inoremap <leader>w <Esc>:w<Cr>
-inoremap <c-u> <Esc>viwU
+inoremap <c-u> <Esc>viwUea
+
 " --------
 "Translate
 " --------
