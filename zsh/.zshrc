@@ -63,7 +63,7 @@ bindkey '^[[Z' undo                                             # Shift+tab undo
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
-alias gitu='git add . && git commit && git push'
+alias gitu='git add . && git commit && gp'
 
 # Theming section  
 autoload -U compinit colors zcalc
@@ -220,6 +220,10 @@ alias clean='_ pacman -Rs $(pacman -Qdtq)'
 # alias xx='xmodmap ~/xmodmap/xmodmap'
 alias ,/='./'
 
+# ------
+# Share
+# ------
+alias send='kdeconnect-cli -d 2acc08d59f2f39e8 --share'
 # --------
 # SSH & SCP & GIT
 # --------
