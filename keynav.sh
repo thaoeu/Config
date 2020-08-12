@@ -1,4 +1,4 @@
 #!/bin/bash
 sudo pacman -S keynav --noconfirm
-source ./install.sh
+source ./main.sh
 config_keynav

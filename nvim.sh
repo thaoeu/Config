@@ -1,4 +1,4 @@
 #!/bin/bash
 sudo pacman -S neovim --noconfirm
-source ./install.sh
+source ./main.sh
 config_vim
