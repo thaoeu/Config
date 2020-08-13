@@ -229,8 +229,6 @@ alias sr='kdeconnect-cli -d 2acc08d59f2f39e8 --ping'
 # SSH & SCP & GIT
 # --------
 alias the='ssh root@134.175.192.94'
-alias the1='ssh root@139.9.138.63'
-alias the2='ssh root@121.36.62.109'
 alias thaoeu='ssh 192.168.31.51 -p 8022'
 alias desk='rdesktop -v -u qj -p qj1125 -g 1920x1070 192.168.31.211'
 alias adesk='rdesktop -u administrator -p Linux1125 -g 1920x1070 47.95.196.82'

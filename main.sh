@@ -27,3 +27,7 @@ config_zsh() {
 config_bash() {
 	ln -f $WorkDir/bash/.bashrc ~
 }
+config_dunst() {
+	mkdir ~/.config/dunst
+	ln -f $WorkDir/dunst/dunstrc ~/dunst
+}

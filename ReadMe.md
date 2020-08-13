@@ -125,3 +125,11 @@ p10k configure
 
 > VimLike 终端文件管理器，仅在默认基础上添加了图标更改了默认打开方式
 
+## dunst
+
+```
+./dunst.sh
+```
+
+> 通知管理器，顶部横栏式通知
+配置文件位置 `~/.config/dunst/dunstrc`
