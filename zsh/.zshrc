@@ -224,6 +224,7 @@ alias ,/='./'
 # Share
 # ------
 alias send='kdeconnect-cli -d 2acc08d59f2f39e8 --share'
+alias sr='kdeconnect-cli -d 2acc08d59f2f39e8 --ping'
 # --------
 # SSH & SCP & GIT
 # --------
