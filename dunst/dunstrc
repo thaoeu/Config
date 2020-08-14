@@ -1,17 +1,30 @@
 [global]
-  corner_radius = 4
-  follow = mouse
-  font = "Noto Sans 22"
-  format = "<b>%s</b>\n<span font='18'>%b</span>"
-  frame_color = "#66ccff"
-  frame_width = 2
-#  geometry = "500x5-6-30"
-  history = ctrl+grave
-  history_length = 10
-  horizontal_padding = 8
-  icon_position = left
-  max_icon_size = 48
-  icon_path = /usr/share/icons/gnome/48x48/status/:/usr/share/icons/gnome/48x48/actions/
+	corner_radius = 4
+	follow = mouse
+	font = "Noto Sans 22"
+	format = "<b>%s</b>\n<span font='18'>%b</span>"
+	frame_color = "#66ccff"
+	frame_width = 2
+	geometry = "400-24+53"
+	history = ctrl+grave
+	history_length = 10
+	horizontal_padding = 8
+	icon_position = left
+	max_icon_size = 48
+	icon_path = /usr/share/icons/gnome/48x48/status/:/usr/share/icons/gnome/48x48/actions/:/usr/share/icons/Papirus-Custom/48x48/actions/:/usr/share/icons/Papirus-Custom/48x48/apps/:/usr/share/icons/Papirus-Custom/48x48/devices/:/usr/share/icons/Papirus-Custom/48x48/emblems/:/usr/share/icons/Papirus-Custom/48x48/emotes/:/usr/share/icons/Papirus-Custom/48x48/mimetypes/:/usr/share/icons/Papirus-Custom/48x48/places/:/usr/share/icons/Papirus-Custom/48x48/status/
+  
+browser = firefox
+
+mouse_left_click = close_current
+mouse_middle_click = do_action
+mouse_right_click = close_all
+
+[shortcuts]
+close = ctrl+Tab
+close_all = ctrl+apostrophe
+history = ctrl+comma
+context = ctrl+period
+
   idle_threshold = 120
   ignore_newline = no
   indicate_hidden = yes
@@ -29,7 +42,7 @@
 [urgency_low]
   background = "#282a36"
   foreground = "#787878"
-  timeout = 4
+  timeout = 3
 
 [urgency_normal]
   background = "#282a36"
@@ -37,7 +50,7 @@
   timeout = 7
 
 [urgency_critical]
-  background = "#ff5c57"
-  foreground = "#f1f1f0"
+  background = "#282a36"
+  foreground = "#ff5c57"
   icon = /usr/share/icons/gnome/48x48/emblems/emblem-important.png
   timeout = 0
