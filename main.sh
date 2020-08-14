@@ -29,5 +29,5 @@ config_bash() {
 }
 config_dunst() {
 	mkdir ~/.config/dunst
-	ln -f $WorkDir/dunst/dunstrc ~/dunst
+	ln -f $WorkDir/dunst/dunstrc ~/.config/dunst
 }
