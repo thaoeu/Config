@@ -1,7 +1,7 @@
 # $HOME/.keynavrc
 # ctrl+semicolon start
 
-ctrl+space start
+alt+space start
 Escape end
 h cut-left
 j cut-down

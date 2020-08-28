@@ -270,6 +270,11 @@ set -o vi
 EDITOR=nvim
 export EDITOR
 
+ftc() {
+    dir=$(pwd)
+    osascript -e 'tell app "Finder" to set the clipboard to ( POSIX file "'$dir/$1'" )'
+}
+
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
