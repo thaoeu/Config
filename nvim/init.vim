@@ -7,6 +7,14 @@
 " 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 " endif
 "<<< 用shell取代
+set hidden
+set updatetime=100
+set shortmess+=c
+if has("patch-8.1.1564")
+	set signcolumn=number
+else
+	set signcolumn=yes
+endif
 set encoding=utf-8
 set fileencodings=utf-8
 set fileencodings=utf-8,ucs-bom,gbk,cp936,gb2312,gb18030
@@ -47,7 +55,8 @@ let g:SnazzyTransparent = 1
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif							"Restore last position
 autocmd BufWritePre *.markdown,*.md,*.text,*.txt,*.wiki,*.cnx call PanGuSpacing()		"PanGu auto typesetting
 
-let g:Hexokinase_highlighters = ['backgroundfull']
+" let g:Hexokinase_highlighters = ['backgroundfull']
+" let g:Hexokinase_v2 = 0
 
 " --------
 " <leader>
@@ -101,12 +110,12 @@ Plug 'connorholyday/vim-snazzy'
 Plug 'dracula/vim'
 " Theme for vim not Nvim
 
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+" Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " 颜色插件，在代码中展示色值
 Plug 'yggdroot/indentline'
 " 缩进线，主供 Python 使用
 Plug 'mhinz/vim-startify'
-" 开屏牛助手
+" 开屏助手
 Plug 'easymotion/vim-easymotion'
 " 快速移动
 Plug 'LukeLike/vim-fcitx-switch'
@@ -115,13 +124,13 @@ Plug 'dhruvasagar/vim-table-mode'
 " 表格增强插件
 
 Plug 'mbbill/undotree', {'on':'UndotreeToggle'}
-" 使用 <leader>u 来展开文件历史
+" 使用 ,u 来展开文件历史
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-" 通过 <leader>e 来打开文件管理器
+" 通过 ,e 来打开文件管理器
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " nerdtree 的 Git 同步状态插件
 
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 " 代码片段
 Plug 'honza/vim-snippets'
 " 代码片段仓库
@@ -208,9 +217,19 @@ elseif &filetype == 'c'
 endif
 endfunc
 
-" --------
-"	   Coc
-" --------
+" -------
+" Coc.nvim
+" -------
+let g:coc_global_extensions = [
+	\'coc-vimlsp', 
+	\'coc-python',
+	\'coc-pyright',
+	\'coc-html',
+	\'coc-clangd',
+	\'coc-go',
+	\'coc-snippets',
+	\'coc-picgo']
+
 
 " --------
 " 延时启动
@@ -225,6 +244,19 @@ endfunc
 " 使用 <c-space>强制触发补全
 inoremap <silent><expr> <c-space> coc#refresh()
 
+" 使用 <Tab> 触发补全
+"	inoremap <silent><expr> <TAB>
+"		  \ pumvisible() ? "\<C-n>" :
+"		  \ <SID>check_back_space() ? "\<TAB>" :
+"		  \ coc#refresh()
+"	inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"	function! s:check_back_space() abort
+"	  let col = col('.') - 1
+"	  return !col || getline('.')[col - 1]  =~# '\s'
+"	endfunction
+
+
 " 使用 <tab> 触发补全
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -235,6 +267,42 @@ inoremap <silent><expr> <TAB>
 	  \ pumvisible() ? "\<C-n>" :
 	  \ <SID>check_back_space() ? "\<TAB>" :
 	  \ coc#refresh()
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> <leader>= <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader>\ <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 
 " --------

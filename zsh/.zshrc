@@ -211,6 +211,8 @@ alias ,f=fuck
 alias ,p='feh --recursive --bg-fill'
 alias ,ve='nvim ~/.config/nvim/init.vim'
 alias ,v='nvim ~/.zshrc'
+alias y='yay -S --noconfirm'
+alias up='sudo pacman -Syyu'
 alias v='nvim'
 alias p=pwd
 alias l='ls'
@@ -219,6 +221,7 @@ alias q='exit'
 alias clean='_ pacman -Rs $(pacman -Qdtq)'
 # alias xx='xmodmap ~/xmodmap/xmodmap'
 alias ,/='./'
+alias d='sh Script/date.sh'
 
 # ------
 # Share

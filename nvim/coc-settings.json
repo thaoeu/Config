@@ -8,3 +8,8 @@
 	}
 }
 
+snippets.ultisnips.directories: [
+	UltiSnips,
+	$HOME/.config/nvim/UltiSnips/,
+	$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/
+],
