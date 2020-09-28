@@ -232,8 +232,9 @@ alias sr='kdeconnect-cli -d 2acc08d59f2f39e8 --ping'
 # SSH & SCP & GIT
 # --------
 alias the='ssh root@134.175.192.94'
-alias thaoeu='ssh 192.168.31.51 -p 8022'
-alias desk='rdesktop -v -u qj -p qj1125 -g 1920x1070 192.168.31.211'
+alias wrt='ssh root@192.168.2.1'
+#alias thaoeu='ssh 192.168.31.51 -p 8022'
+#alias desk='rdesktop -v -u qj -p qj1125 -g 1920x1070 192.168.31.211'
 alias s='git status'
 alias gp='git push gitee master && git push github master'
 alias gpb='git push && git push io master'
