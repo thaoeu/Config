@@ -216,7 +216,7 @@ elseif &filetype == 'python'
 	:sp
 	:!time python %
 elseif &filetype == 'html'
-	exec "!vivaldi-stable % &"
+	exec "!chromium % &"
 elseif &filetype == 'markdown'
 	exec "MarkdownPreview"
 endif
