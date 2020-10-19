@@ -331,20 +331,28 @@ autocmd Filetype go nmap <leader>b <Plug>(go-build)
 " --------
 " NERDTree
 " --------
-nnoremap <leader>e :NERDTreeToggle<CR>
-let NERDTreeMapOpenExpl = ""
-let NERDTreeShowHidden=1
-let NERDTreeMapUpdir = ""
-let NERDTreeMapUpdirKeepOpen = "l"
-let NERDTreeMapOpenSplit = ""
-let NERDTreeOpenVSplit = ""
-let NERDTreeMapActivateNode = "i"
-let NERDTreeMapOpenInTab = "o"
-let NERDTreeMapPreview = ""
-let NERDTreeMapCloseDir = "n"
-let NERDTreeMapChangeRoot = "y"
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+" nnoremap <leader>e :NERDTreeToggle<CR>
+" let NERDTreeMapOpenExpl = ""
+" let NERDTreeShowHidden=1
+" let NERDTreeMapUpdir = ""
+" let NERDTreeMapUpdirKeepOpen = "l"
+" let NERDTreeMapOpenSplit = ""
+" let NERDTreeOpenVSplit = ""
+" let NERDTreeMapActivateNode = "i"
+" let NERDTreeMapOpenInTab = "o"
+" let NERDTreeMapPreview = ""
+" let NERDTreeMapCloseDir = "n"
+" let NERDTreeMapChangeRoot = "y"
+" let g:NERDTreeDirArrowExpandable = '▸'
+" let g:NERDTreeDirArrowCollapsible = '▾'
+" -------
+" Ranger
+" -------
+let g:ranger_map_key = 0
+map <leader>e :Ranger<Cr>
+
+
+
 
 " --------
 " git-tree

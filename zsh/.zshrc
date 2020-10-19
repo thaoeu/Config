@@ -226,8 +226,8 @@ alias d='sh Script/date.sh'
 # ------
 # Share
 # ------
-alias send='kdeconnect-cli -d 2acc08d59f2f39e8 --share'
-alias sr='kdeconnect-cli -d 2acc08d59f2f39e8 --ping'
+alias send='kdeconnect-cli -d aeff7a2afd7ec14c --share'
+alias sr='kdeconnect-cli -d aeff7a2afd7ec14c --ping'
 # --------
 # SSH & SCP & GIT
 # --------
@@ -236,7 +236,7 @@ alias wrt='ssh root@192.168.2.1'
 #alias thaoeu='ssh 192.168.31.51 -p 8022'
 #alias desk='rdesktop -v -u qj -p qj1125 -g 1920x1070 192.168.31.211'
 alias s='git status'
-alias gp='git push gitee master && git push github master'
+alias gp='git push github master && git push gitee master'
 alias gpb='git push && git push io master'
 alias tim='cd /usr/lib && ./gsd-xsettings &'
 alias site='echo "http://www.sqlsec.com" |curl -F-=\<- qrenco.de'
@@ -258,8 +258,8 @@ alias i=ipython
 # Qmk
 # --------
 alias ,mk='avrdude -p atmega32u4 -P /dev/ttyACM0 -c avr109 -U flash:w:bggpad_default.hex'
-alias bgg='cd ~/Templates/qmk_firmware/keyboards/bggpad/keymaps/default/'
-alias qmk='cd ~/Templates/qmk_firmware && make bggpad:default'
+alias bgg='cd ~/Fasttop/qmk_firmware/keyboards/bggpad/keymaps/default/'
+alias qmk='cd ~/Fasttop/qmk_firmware && make bggpad:default'
 alias n='feh --recursive --bg-fill'
 
 # --------
@@ -268,6 +268,12 @@ alias n='feh --recursive --bg-fill'
 alias neo='neofetch \--block_range 1 8 \--line_wrap off \--bold off \--uptime_shorthand on \--gtk_shorthand on \'
 alias fig='figlet -f lean'
 alias xmod='xmodmap ~/Overt/config/xmodmap/xmodmap_esc2Caps'
+
+#热点
+alias touchap="rm -f /tmp/create_ap.all.locksudo && systemctl start create_ap" # 开启热点
+alias rmap="sudo systemctl stop create_ap" # 关闭热点
+alias lsap="create_ap --list-running" # 查看热点
+
 alias xmoda='xmodmap ~/Overt/config/xmodmap/xmodmap_ldur'
 alias _=sudo
 set -o vi
