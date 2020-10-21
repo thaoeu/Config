@@ -12,6 +12,7 @@ config_vim() {
 config_ranger() {
 	mkdir -p ~/.config/ranger/plugins
 	cp -r $WorkDir/ranger/plugins/* ~/.config/ranger/plugins
+	ln -f $WorkDir/ranger/plugins/devicons.py ~/.config/ranger/plugins/devicons.py
 	ln -f $WorkDir/ranger/rc.conf ~/.config/ranger/rc.conf
 	ln -f $WorkDir/ranger/rifle.conf ~/.config/ranger/rifle.conf
 	ln -f $WorkDir/ranger/scope.sh ~/.config/ranger/scope.sh
