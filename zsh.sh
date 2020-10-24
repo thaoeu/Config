@@ -5,3 +5,4 @@ config_zsh
 yay -S --noconfirm zsh-theme-powerlevel10k-git
 yay -S xclip --noconfirm
 yay -S feh --noconfirm
+yay -S dmenu --noconfirm
