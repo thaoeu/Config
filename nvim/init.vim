@@ -1,5 +1,5 @@
 "<<<
-"自动安装 Vim-plug 插件
+"自动安装插件
 ">>>
 " if empty(glob('~/.config/nvim/autoload/plug.vim'))
 " 	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
@@ -352,8 +352,6 @@ let g:ranger_map_key = 0
 map <leader>e :Ranger<Cr>
 
 
-
-
 " --------
 " git-tree
 " --------
@@ -414,6 +412,7 @@ autocmd Filetype markdown inoremap ,l --------<Enter>
 autocmd Filetype markdown inoremap ,b **** #>#<Esc>F*hi
 " <leader>b 加粗
 autocmd Filetype markdown inoremap ,i ** #>#<Esc>F*i
+autocmd FileType markdown inoremap <C-i> <Esc>bi**<Esc>ea**
 " <leader>i 斜体
 autocmd Filetype markdown inoremap ,s ~~~~ #>#<Esc>F~hi
 " <leader>s 划掉

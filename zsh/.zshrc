@@ -64,6 +64,7 @@ alias cp="cp -i"                                                # Confirm before
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && gp'
+alias gt='ssh -T git@github.com'
 
 # Theming section  
 autoload -U compinit colors zcalc
