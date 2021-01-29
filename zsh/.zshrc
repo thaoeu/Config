@@ -233,6 +233,7 @@ alias sr='kdeconnect-cli -d aeff7a2afd7ec14c --ping'
 # SSH & SCP & GIT
 # --------
 alias the='ssh root@134.175.192.94'
+#	alias what should i do='nvim ~/Fasttop/todo.md'
 alias wrt='ssh root@192.168.2.1'
 #alias thaoeu='ssh 192.168.31.51 -p 8022'
 #alias desk='rdesktop -v -u qj -p qj1125 -g 1920x1070 192.168.31.211'

@@ -389,7 +389,7 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " --------
 " MarkDown
 " --------
-" let g:mkdp_browser = 'vivaldi-stable'
+let g:mkdp_browser = 'chromium'
 " 指定 Markdown 预览的浏览器
 " > >>	引用
 " -		无序列表
