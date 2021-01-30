@@ -121,7 +121,8 @@ Plug 'junegunn/goyo.vim'
 " 隐藏其他控件，专注
 Plug 'hotoo/pangu.vim'
 "『盘古之白』中文排版
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+"Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'iamcco/markdown-preview.vim'
 " Markdown 同步预览
 Plug 'connorholyday/vim-snazzy'
 " Snazzy 主题
@@ -389,7 +390,7 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " --------
 " MarkDown
 " --------
-let g:mkdp_browser = 'chromium'
+let g:mkdp_browser = 'firefox'
 " 指定 Markdown 预览的浏览器
 " > >>	引用
 " -		无序列表
@@ -399,7 +400,7 @@ noremap <leader>m i#>#<Esc>
 noremap <leader>l a--------<Esc>
 noremap <leader>t <Esc>/#>#<Cr>:nohlsearch<Cr>c3l
 noremap <leader>/ <Esc>:nohlsearch<Cr>
-autocmd Filetype markdown inoremap ,r <Esc>:MarkdownPreview<Cr>
+"autocmd Filetype markdown inoremap ,r <Esc>:MarkdownPreview<Cr>
 " <leader>r 预览
 autocmd Filetype markdown inoremap ,t <Esc>/#>#<Cr>:nohlsearch<Cr>c3l
 " <leader>h 找到最近的标记
