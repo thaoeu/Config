@@ -121,6 +121,7 @@ Plug 'junegunn/goyo.vim'
 " 隐藏其他控件，专注
 Plug 'hotoo/pangu.vim'
 "『盘古之白』中文排版
+Plug 'lilydjwg/colorizer'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'iamcco/markdown-preview.vim'
 " Markdown 同步预览
@@ -428,7 +429,7 @@ autocmd Filetype markdown inoremap ,2 <sub></sub>#>#<Esc>F/hi
 " <leader>1 插入下角标
 autocmd Filetype markdown inoremap ,e - [ ] <Enter>#>#<ESC>kA
 " <leader>e ToDo列表
-autocmd Filetype markdown inoremap ,p ![](#>#) #>#<Esc>F[a
+autocmd Filetype markdown inoremap ,v ![](#>#) #>#<Esc>F[a
 " <leader>p 插入图片
 autocmd Filetype markdown inoremap ,u [](#>#) #>#<Esc>F[a
 " <leader>u 插入链接
