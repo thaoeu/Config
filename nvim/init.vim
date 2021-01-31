@@ -49,6 +49,8 @@ set statusline=%F%m%r%h%w\ -▸%Y'\ ASCII=\%03.3b\ [▸%02l/%L,%02v]
 "set wildmenu		" 命令模式下的补全
 colorscheme snazzy
 set nocompatible	"取消vi兼容
+let helptags=$VIM."/vimfiles/doc"
+set helplang=cn
 
 let g:SnazzyTransparent = 1
 "set clipboard=unnamedplus 
@@ -121,6 +123,8 @@ Plug 'junegunn/goyo.vim'
 " 隐藏其他控件，专注
 Plug 'hotoo/pangu.vim'
 "『盘古之白』中文排版
+Plug 'asins/vimcdoc'
+" 添加Vim中文支持
 Plug 'lilydjwg/colorizer'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'iamcco/markdown-preview.vim'
