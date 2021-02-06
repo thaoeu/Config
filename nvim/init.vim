@@ -69,10 +69,10 @@ nmap <leader>h <Plug>(easymotion-s2)
 nmap <leader>gy :Goyo<Cr>
 nnoremap <leader><C-g> :%s/[^\x00-\xff]//gn<Cr>
 nnoremap <C-t> :term<Cr>a
-nnoremap <leader>i <Esc>:q<Cr>
+nnoremap <leader>i :q<Cr>
 nnoremap <leader>w :w<Cr>
-nnoremap <leader>!w :w !tee > ~/File/tee.vim<Cr>
-nnoremap <leader>!<leader> :r!cat ~/File/tee.vim<Cr>
+nnoremap <leader>!w :w !tee > ~/Fasttop/tee.vim<Cr>
+nnoremap <leader>!<leader> :r!cat ~/Fasttop/tee.vim<Cr>
 nnoremap <leader>s :set spell!<Cr>	" z=　
 nnoremap <leader>ve :vsplit $MYVIMRC<Cr>
 nnoremap <leader>vs :source $MYVIMRC<Cr>
@@ -107,11 +107,11 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 "Translate
 " --------
 
-nmap <silent> <Space> <Plug>TranslateW
-vmap <silent> <Space> <Plug>TranslateWV
+nmap <silent> <Leader>t <Plug>TranslateW
+vmap <silent> <Leader>t <Plug>TranslateWV
 
-nmap <silent> <Leader><Space> <Plug>TranslateR
-vmap <silent> <Leader><Space> <Plug>TranslateRV
+nmap <silent> <Leader>T <Plug>TranslateR
+vmap <silent> <Leader>T <Plug>TranslateRV
 " --------
 "  vimPlug
 " --------
@@ -126,6 +126,18 @@ Plug 'hotoo/pangu.vim'
 Plug 'asins/vimcdoc'
 " 添加Vim中文支持
 Plug 'lilydjwg/colorizer'
+Plug 'liuchengxu/vim-which-key'
+
+" On-demand lazy load
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+set timeoutlen=500
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+
+" To register the descriptions when using the on-demand load feature,
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'iamcco/markdown-preview.vim'
 " Markdown 同步预览

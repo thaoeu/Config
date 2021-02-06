@@ -54,7 +54,7 @@ http://flypy.ys168.com	xhwp
 👌	ok
 👎	ro
 👏	gv
-☕	ia
+茶	ia
 🍺	pj
 🎂	dg
 🙏	bt

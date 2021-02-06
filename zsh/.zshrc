@@ -234,13 +234,13 @@ alias sr='kdeconnect-cli -d aeff7a2afd7ec14c --ping'
 # --------
 alias the='ssh root@134.175.192.94'
 #	alias what should i do='nvim ~/Fasttop/todo.md'
-alias wrt='ssh root@192.168.2.1'
+alias wrt='ssh root@9.9.9.9'
 #alias thaoeu='ssh 192.168.31.51 -p 8022'
 #alias desk='rdesktop -v -u qj -p qj1125 -g 1920x1070 192.168.31.211'
 alias s='git status'
 alias gp='git push github master && git push gitee master'
 alias gpb='git push && git push io master'
-alias tim='cd /usr/lib && ./gsd-xsettings &'
+#alias tim='cd /usr/lib && ./gsd-xsettings &'
 alias site='echo "http://www.sqlsec.com" |curl -F-=\<- qrenco.de'
 # --------
 # FileName
