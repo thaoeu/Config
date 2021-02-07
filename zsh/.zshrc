@@ -222,7 +222,38 @@ alias q='exit'
 alias clean='_ pacman -Rs $(pacman -Qdtq)'
 # alias xx='xmodmap ~/xmodmap/xmodmap'
 alias ,/='./'
-alias d='sh Script/date.sh'
+# alias d='sh Script/date.sh'
+
+# -------
+# Trash
+# -------
+# 移动到回收站
+trash(){
+	mv $@ ~/Qbit/Trach/
+}
+# 显示回收站
+list_trash(){
+	echo -e "33[32m==== Garbage Lists in ~/Qbit/Trach/ ====33[0m"  
+	echo -e "\a33[33m----Usage------33[0m"  
+	echo -e "\a33[33m-1- Use 'cleartrash' to clear all garbages in ~/Qbit/Trach!!!33[0m"  
+	echo -e "\a33[33m-2- Use 'ur' to mv the file in garbages to current dir!!!33[0m"  
+	ls -al  ~/Qbit/Trach
+}
+#恢复回收站
+undel_trash(){
+	mv -i ~/Qbit/Trach/$@ ./
+}
+#清空回收站
+cleartrash(){  
+	echo -ne "\a33[33m!!!Clear all garbages in ~/Qbit/Trach, Sure?[y/n]33[0m"  
+	read confirm  
+	if [ $confirm == 'y' -o $confirm == 'Y' ] ;then  
+		/bin/rm -rf ~/Qbit/Trach/*  
+		/bin/rm -rf ~/Qbit/Trach/.* 2>/dev/null  
+	fi    
+}
+alias d='trash'
+
 
 # ------
 # Share
