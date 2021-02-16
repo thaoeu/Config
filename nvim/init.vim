@@ -107,7 +107,7 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 "Translate
 " --------
 
-nmap <silent> <Leader>t <Plug>TranslateW
+nmap <silent> <Space> <Plug>TranslateW
 vmap <silent> <Leader>t <Plug>TranslateWV
 
 nmap <silent> <Leader>T <Plug>TranslateR
@@ -126,16 +126,16 @@ Plug 'hotoo/pangu.vim'
 Plug 'asins/vimcdoc'
 " 添加Vim中文支持
 Plug 'lilydjwg/colorizer'
-Plug 'liuchengxu/vim-which-key'
+" Plug 'liuchengxu/vim-which-key'
 
 " On-demand lazy load
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
-set timeoutlen=500
-let g:mapleader = "\<Space>"
-let g:maplocalleader = ','
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+"Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+"nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+"set timeoutlen=500
+"let g:mapleader = "\<Space>"
+"let g:maplocalleader = ','
+"nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+"nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 " To register the descriptions when using the on-demand load feature,
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }

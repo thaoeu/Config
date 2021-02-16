@@ -223,6 +223,15 @@ alias clean='_ pacman -Rs $(pacman -Qdtq)'
 # alias xx='xmodmap ~/xmodmap/xmodmap'
 alias ,/='./'
 # alias d='sh Script/date.sh'
+# -------
+# Feh
+# -------
+feh_select(){
+	feh --recursive --bg-fill $@
+}
+
+alias f='feh_select'
+
 
 # -------
 # Trash
@@ -233,10 +242,10 @@ trash(){
 }
 # 显示回收站
 list_trash(){
-	echo -e "33[32m==== Garbage Lists in ~/Qbit/Trach/ ====33[0m"  
-	echo -e "\a33[33m----Usage------33[0m"  
-	echo -e "\a33[33m-1- Use 'cleartrash' to clear all garbages in ~/Qbit/Trach!!!33[0m"  
-	echo -e "\a33[33m-2- Use 'ur' to mv the file in garbages to current dir!!!33[0m"  
+#	echo -e "33[32m==== Garbage Lists in ~/Qbit/Trach/ ====33[0m"  
+#	echo -e "\a33[33m----Usage------33[0m"  
+#	echo -e "\a33[33m-1- Use 'cleartrash' to clear all garbages in ~/Qbit/Trach!!!33[0m"  
+#	echo -e "\a33[33m-2- Use 'ur' to mv the file in garbages to current dir!!!33[0m"  
 	ls -al  ~/Qbit/Trach
 }
 #恢复回收站
@@ -253,6 +262,7 @@ cleartrash(){
 	fi    
 }
 alias d='trash'
+alias vm='undel_trash'
 
 
 # ------
@@ -285,7 +295,7 @@ alias update='sudo pacman-mirrors -i -c China -m rank'
 #alias sus='systemctl suspend'
 alias hn='cd ~/Overt/blog && hugo new'
 alias hu='cd ~/Overt/blog/content/post'
-alias e=ranger
+alias e=lf
 alias i=ipython
 # --------
 # Qmk
