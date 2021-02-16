@@ -68,7 +68,8 @@ nmap <leader>h <Plug>(easymotion-s2)
 " inoremap <C-S-U> <ESC>gUiwgi
 nmap <leader>gy :Goyo<Cr>
 nnoremap <leader><C-g> :%s/[^\x00-\xff]//gn<Cr>
-nnoremap <C-t> :term<Cr>a
+" nnoremap <C-t> :term<Cr>a
+nnoremap <C-t> :FloatermNew --height=30 --width=30 --wintype=float --name=floaterm1 --position=topright --autoclose=2<Cr> 
 nnoremap <leader>i :q<Cr>
 nnoremap <leader>w :w<Cr>
 nnoremap <leader>!w :w !tee > ~/Fasttop/tee.vim<Cr>
@@ -116,7 +117,11 @@ vmap <silent> <Leader>T <Plug>TranslateRV
 "  vimPlug
 " --------
 call plug#begin('~/.vim/plugged')
-Plug 'francoiscabrol/ranger.vim'
+" Plug 'francoiscabrol/ranger.vim'
+" Plug 'thezeroalpha/vim-lf'
+Plug 'ptzz/lf.vim'
+Plug 'voldikss/vim-floaterm'
+
 Plug 'rbgrouleff/bclose.vim'
 
 Plug 'junegunn/goyo.vim'
@@ -161,9 +166,9 @@ Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'mbbill/undotree', {'on':'UndotreeToggle'}
 " 使用 ,u 来展开文件历史
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " 通过 ,e 来打开文件管理器
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 " nerdtree 的 Git 同步状态插件
 
 " Plug 'SirVer/ultisnips'
@@ -366,24 +371,29 @@ autocmd Filetype go nmap <leader>b <Plug>(go-build)
 " -------
 " Ranger
 " -------
-let g:ranger_map_key = 0
-map <leader>e :Ranger<Cr>
+"let g:ranger_map_key = 0
+"map <leader>e :Ranger<Cr>
 
+let g:lf_map_keys = 0
+map <leader>e :Lf<CR>
+let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
+"g: floaterm_width=60
+"g: floaterm_height=60
 
 " --------
 " git-tree
 " --------
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ "Unknown"   : "?"
-    \ }
+"let g:NERDTreeIndicatorMapCustom = {
+"    \ "Modified"  : "✹",
+"    \ "Staged"    : "✚",
+"    \ "Untracked" : "✭",
+"    \ "Renamed"   : "➜",
+"    \ "Unmerged"  : "═",
+"    \ "Deleted"   : "✖",
+"    \ "Dirty"     : "✗",
+"    \ "Clean"     : "✔︎",
+"    \ "Unknown"   : "?"
+"    \ }
 
 " --------
 " Undotree
@@ -420,9 +430,9 @@ noremap <leader>/ <Esc>:nohlsearch<Cr>
 "autocmd Filetype markdown inoremap ,r <Esc>:MarkdownPreview<Cr>
 " <leader>r 预览
 autocmd Filetype markdown inoremap ,t <Esc>/#>#<Cr>:nohlsearch<Cr>c3l
-" <leader>h 找到最近的标记
+" <leader>t 找到最近的标记
 autocmd Filetype markdown inoremap ,h <Esc>/#>#<Cr>:nohlsearch<Cr>c3l<Cr>
-" <leader>t 找到标记并换行
+" <leader>h 找到标记并换行
 
 autocmd Filetype markdown inoremap ,n ---<Enter><Enter>
 autocmd Filetype markdown inoremap ,l --------<Enter>

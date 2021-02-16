@@ -1,5 +1,5 @@
 # interpreter for shell commands (needs to be POSIX compatible)
-set shell zsh
+set shell sh
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
@@ -22,6 +22,7 @@ set scrolloff 10
 
 # use enter for shell commands
 map <enter> shell
+map t :
 
 # execute current file (must be executable)
 # map x $$f
@@ -53,6 +54,9 @@ cmd open ${{
 # move current file or selected files to trash folder
 # (also see 'man mv' for backup/overwrite options)
 cmd trash %set -f; mv $fx ~/Qbit/Trach
+cmd tra ${{
+mv $f ~/Qbit/Trach
+}}
 
 # define a custom 'delete' command
 # cmd delete ${{
@@ -98,3 +102,7 @@ cmd zip ${{
     zip -r $1.zip $1
     rm -rf $1
 }}
+
+
+cmd bulkrename $edir
+map <c-r> bulkrename
