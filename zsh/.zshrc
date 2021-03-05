@@ -215,6 +215,7 @@ alias ,v='nvim ~/.zshrc'
 alias y='yay -S --noconfirm'
 alias up='sudo pacman -Syyu'
 alias v='nvim'
+alias b='~/Script/Image/bright.sh'
 alias p=pwd
 alias l='ls'
 alias t='v ~/Templates/hgd.md'

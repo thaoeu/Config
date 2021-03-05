@@ -41,6 +41,8 @@ syntax enable
 set listchars=tab:▸\ ,trail:¬,extends:>,precedes:<
 set softtabstop=4	" inentation
 filetype indent on
+"filetype plugin on
+set path+=**
 set autoindent
 set tabstop=4
 set shiftwidth=4
@@ -239,7 +241,7 @@ elseif &filetype == 'python'
 	:sp
 	:!time python %
 elseif &filetype == 'html'
-	exec "!chromium % &"
+	exec "!vivaldi-stable % &"
 elseif &filetype == 'markdown'
 	exec "MarkdownPreview"
 endif
@@ -417,7 +419,7 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " --------
 " MarkDown
 " --------
-let g:mkdp_browser = 'firefox'
+let g:mkdp_browser = 'vivaldi-stable'
 " 指定 Markdown 预览的浏览器
 " > >>	引用
 " -		无序列表
@@ -453,7 +455,8 @@ autocmd Filetype markdown inoremap ,1 <sup></sup>#>#<Esc>F/hi
 " <leader>1 插入上角标
 autocmd Filetype markdown inoremap ,2 <sub></sub>#>#<Esc>F/hi
 " <leader>1 插入下角标
-autocmd Filetype markdown inoremap ,e - [ ] <Enter>#>#<ESC>kA
+" autocmd Filetype markdown inoremap ,e - [ ] <Enter>#>#<ESC>kA
+autocmd Filetype markdown inoremap ,e - [ ] 
 " <leader>e ToDo列表
 autocmd Filetype markdown inoremap ,v ![](#>#) #>#<Esc>F[a
 " <leader>v 插入图片
