@@ -125,6 +125,9 @@ Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
 
 Plug 'rbgrouleff/bclose.vim'
+Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'tyru/open-browser.vim'
+Plug 'aklt/plantuml-syntax'
 
 Plug 'junegunn/goyo.vim'
 " 隐藏其他控件，专注
@@ -222,6 +225,7 @@ inoremap <leader>p <Esc>:setl paste<Cr>gi<C-R>+<Esc>:setl nopaste<Cr>gi
 " --------
 " Complie
 " --------
+map <leader><leader>r :PlantumlOpen<Cr>
 map <leader>r :call Complie()<Cr>
 func! Complie()
 	exec "w"
