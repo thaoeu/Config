@@ -56,9 +56,9 @@ cmd open ${{
 
 # move current file or selected files to trash folder
 # (also see 'man mv' for backup/overwrite options)
-cmd trash %set -f; mv $fx ~/Qbit/Trach
+cmd trash %set -f; mv $fx ~/Qbit/Trash
 cmd tra ${{
-mv $f ~/Qbit/Trach
+mv $f ~/Qbit/Trash
 }}
 
 # define a custom 'delete' command

@@ -239,7 +239,7 @@ alias f='feh_select'
 # -------
 # 移动到回收站
 trash(){
-	mv $@ ~/Qbit/Trach/
+	mv $@ ~/Qbit/Trash/
 }
 # 显示回收站
 list_trash(){
@@ -247,11 +247,11 @@ list_trash(){
 #	echo -e "\a33[33m----Usage------33[0m"  
 #	echo -e "\a33[33m-1- Use 'cleartrash' to clear all garbages in ~/Qbit/Trach!!!33[0m"  
 #	echo -e "\a33[33m-2- Use 'ur' to mv the file in garbages to current dir!!!33[0m"  
-	ls -al  ~/Qbit/Trach
+	ls -al  ~/Qbit/Trash
 }
 #恢复回收站
 undel_trash(){
-	mv -i ~/Qbit/Trach/$@ ./
+	mv -i ~/Qbit/Trash/$@ ./
 }
 #清空回收站
 cleartrash(){  
@@ -274,9 +274,13 @@ alias sr='kdeconnect-cli -d aeff7a2afd7ec14c --ping'
 # --------
 # SSH & SCP & GIT
 # --------
-alias the='ssh root@134.175.192.94'
-#	alias what should i do='nvim ~/Fasttop/todo.md'
-alias 9='ssh root@9.9.9.9'
+
+alias 121='ssh sqj@121.229.54.24'
+alias 180='ssh sqj@180.106.83.105'
+180=sqj@180.106.83.105
+121=sqj@121.229.54.24
+alias 'what should i do'='nvim ~/Fasttop/todo.md'
+#alias 9='ssh root@9.9.9.9'
 #alias thaoeu='ssh 192.168.31.51 -p 8022'
 #alias desk='rdesktop -v -u qj -p qj1125 -g 1920x1070 192.168.31.211'
 alias s='git status'

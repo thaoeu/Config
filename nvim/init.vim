@@ -57,7 +57,7 @@ set helplang=cn
 let g:SnazzyTransparent = 1
 "set clipboard=unnamedplus 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif							"Restore last position
-autocmd BufWritePre *.markdown,*.md,*.text,*.txt,*.wiki,*.cnx call PanGuSpacing()		"PanGu auto typesetting
+"autocmd BufWritePre *.markdown,*.md,*.text,*.txt,*.wiki,*.cnx call PanGuSpacing()		"PanGu auto typesetting
 
 " let g:Hexokinase_highlighters = ['backgroundfull']
 " let g:Hexokinase_v2 = 0
@@ -131,7 +131,7 @@ Plug 'aklt/plantuml-syntax'
 
 Plug 'junegunn/goyo.vim'
 " 隐藏其他控件，专注
-Plug 'hotoo/pangu.vim'
+"Plug 'hotoo/pangu.vim'
 "『盘古之白』中文排版
 Plug 'asins/vimcdoc'
 " 添加Vim中文支持
