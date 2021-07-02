@@ -267,15 +267,15 @@ endfunc
 " -------
 " Coc.nvim
 " -------
-let g:coc_global_extensions = [
-	\'coc-vimlsp', 
-	\'coc-python',
-	\'coc-pyright',
-	\'coc-html',
-	\'coc-clangd',
-	\'coc-go',
-	\'coc-snippets',
-	\'coc-picgo']
+"let g:coc_global_extensions = [
+"	\'coc-vimlsp', 
+"	\'coc-python',
+"	\'coc-pyright',
+"	\'coc-html',
+"	\'coc-clangd',
+"	\'coc-go',
+"	\'coc-snippets',
+"	\'coc-picgo']
 
 
 " --------
@@ -336,7 +336,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
 " Symbol renaming.
