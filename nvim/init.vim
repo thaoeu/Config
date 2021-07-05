@@ -169,7 +169,9 @@ Plug 'LukeLike/vim-fcitx-switch'
 Plug 'dhruvasagar/vim-table-mode'
 " 表格增强插件
 
-Plug 'mbbill/undotree', {'on':'UndotreeToggle'}
+"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
+"Plug 'mbbill/undotree', {'on':'UndotreeToggle'}
 " 使用 ,u 来展开文件历史
 "Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " 通过 ,e 来打开文件管理器
@@ -267,15 +269,15 @@ endfunc
 " -------
 " Coc.nvim
 " -------
-"let g:coc_global_extensions = [
-"	\'coc-vimlsp', 
-"	\'coc-python',
-"	\'coc-pyright',
-"	\'coc-html',
-"	\'coc-clangd',
-"	\'coc-go',
-"	\'coc-snippets',
-"	\'coc-picgo']
+let g:coc_global_extensions = [
+	\'coc-vimlsp', 
+	\'coc-python',
+	\'coc-pyright',
+	\'coc-html',
+	\'coc-clangd',
+	\'coc-go',
+	\'coc-snippets',
+	\'coc-picgo']
 
 
 " --------
@@ -310,9 +312,9 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-inoremap <silent><expr> <TAB>
+inoremap <silent><expr> <C-n>
 	  \ pumvisible() ? "\<C-n>" :
-	  \ <SID>check_back_space() ? "\<TAB>" :
+	  \ <SID>check_back_space() ? "\<C-n>" :
 	  \ coc#refresh()
 
 " Use <c-space> to trigger completion.
@@ -336,7 +338,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Highlight the symbol and its references when holding the cursor.
-"autocmd CursorHold * silent call CocActionAsync('highlight')
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
 " Symbol renaming.
@@ -423,7 +425,7 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " --------
 " MarkDown
 " --------
-let g:mkdp_browser = 'vivaldi-stable'
+let g:mkdp_browser = 'firefox'
 " 指定 Markdown 预览的浏览器
 " > >>	引用
 " -		无序列表
