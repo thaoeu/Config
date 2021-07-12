@@ -2,7 +2,7 @@
 chsh -s /bin/zsh
 source ./main.sh
 config_zsh
-sudo pacman -S --noconfirm zsh-theme-powerlevel10k-git
+sudo pacman -S --noconfirm zsh-theme-powerlevel10k
 sudo pacman -S xclip --noconfirm
 sudo pacman -S feh --noconfirm
 sudo pacman -S dmenu --noconfirm
