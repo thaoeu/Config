@@ -80,8 +80,6 @@ nnoremap <leader>s :set spell!<Cr>	" z=　
 nnoremap <leader>ve :vsplit $MYVIMRC<Cr>
 nnoremap <leader>vs :source $MYVIMRC<Cr>
 nnoremap ; :
-noremap <Cr>j 5jzz
-noremap <Cr>k 5kzz
 noremap - ;
 noremap _ ,
 
@@ -241,6 +239,7 @@ elseif &filetype == 'java'
 	exec "!javac %<"
 	exec "!java %<"
 elseif &filetype == 'sh'
+	:!bash -n %
 	:!time bash %
 elseif &filetype == 'python'
 	set splitright
@@ -434,10 +433,11 @@ let g:mkdp_browser = 'firefox'
 noremap <leader>m i#>#<Esc>
 noremap <leader>l a--------<Esc>
 noremap <leader>t <Esc>/#>#<Cr>:nohlsearch<Cr>c3l
+inoremap <leader>t <Esc>/#>#<Cr>:nohlsearch<Cr>c3l
 noremap <leader>/ <Esc>:nohlsearch<Cr>
 "autocmd Filetype markdown inoremap ,r <Esc>:MarkdownPreview<Cr>
 " <leader>r 预览
-autocmd Filetype markdown inoremap ,t <Esc>/#>#<Cr>:nohlsearch<Cr>c3l
+" 不是很确定是否和上面的重复。
 " <leader>t 找到最近的标记
 autocmd Filetype markdown inoremap ,h <Esc>/#>#<Cr>:nohlsearch<Cr>c3l<Cr>
 " <leader>h 找到标记并换行

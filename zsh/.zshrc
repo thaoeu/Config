@@ -7,6 +7,7 @@ fi
 
 ## Options section
 setopt correct                                                  # Auto correct mistakes
+setopt no_nomatch
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
 setopt rcexpandparam                                            # Array expension with parameters
@@ -279,7 +280,7 @@ alias 121='ssh sqj@121.229.54.24'
 alias 180='ssh sqj@180.106.83.105'
 180=sqj@180.106.83.105
 121=sqj@121.229.54.24
-alias 'what should i do'='nvim ~/Fasttop/todo.md'
+alias 'whatshouldido'='nvim ~/Fasttop/todo.md'
 #alias 9='ssh root@9.9.9.9'
 #alias thaoeu='ssh 192.168.31.51 -p 8022'
 #alias desk='rdesktop -v -u qj -p qj1125 -g 1920x1070 192.168.31.211'
